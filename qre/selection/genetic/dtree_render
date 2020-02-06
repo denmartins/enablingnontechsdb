@@ -1,0 +1,24 @@
+digraph program {
+node [style=filled]
+0 [label="sub", fillcolor="#136ed4"] ;
+1 [label="sub", fillcolor="#136ed4"] ;
+2 [label="sub", fillcolor="#136ed4"] ;
+3 [label="sub", fillcolor="#136ed4"] ;
+4 [label="nativecountry_Peru", fillcolor="#60a6f6"] ;
+5 [label="nativecountry_United-States", fillcolor="#60a6f6"] ;
+3 -> 5 ;
+3 -> 4 ;
+6 [label="nativecountry_United-States", fillcolor="#60a6f6"] ;
+2 -> 6 ;
+2 -> 3 ;
+7 [label="workclass_Private", fillcolor="#60a6f6"] ;
+1 -> 7 ;
+1 -> 2 ;
+8 [label="div", fillcolor="#136ed4"] ;
+9 [label="occupation_Protective-serv", fillcolor="#60a6f6"] ;
+10 [label="race_Black", fillcolor="#60a6f6"] ;
+8 -> 10 ;
+8 -> 9 ;
+0 -> 8 ;
+0 -> 1 ;
+}

@@ -1,0 +1,230 @@
+Name	Data Types	Default Task	Attribute Types	# Instances	# Attributes	Year	Missing Values	Area
+Abalone	Multivariate 	Classification 	Categorical, Integer, Real 	4177 	8 	1995 	No	Life
+Adult	Multivariate 	Classification 	Categorical, Integer 	48842 	14 	1996 	Yes	Social
+Annealing	Multivariate 	Classification 	Categorical, Integer, Real 	798 	38 	NA	Yes	Physical
+Anonymous Microsoft Web Data	NA	Recommender-Systems 	Categorical 	37711 	294 	1998 	NA	Computer
+Arrhythmia	Multivariate 	Classification 	Categorical, Integer, Real 	452 	279 	1998 	Yes	Life
+Artificial Characters	Multivariate 	Classification 	Categorical, Integer, Real 	6000 	7 	1992 	No	Computer
+Audiology (Original)	Multivariate 	Classification 	Categorical 	226 	NA	1987 	Yes	Life
+Audiology (Standardized)	Multivariate 	Classification 	Categorical 	226 	69 	1992 	Yes	Life
+Auto MPG	Multivariate 	Regression 	Categorical, Real 	398 	8 	1993 	Yes	NA
+Automobile	Multivariate 	Regression 	Categorical, Integer, Real 	205 	26 	1987 	Yes	NA
+Badges	Univariate, Text 	Classification 	NA	294 	1 	1994 	No	NA
+Balance Scale	Multivariate 	Classification 	Categorical 	625 	4 	1994 	No	Social
+Balloons	Multivariate 	Classification 	Categorical 	16 	4 	NA	No	Social
+Breast Cancer	Multivariate 	Classification 	Categorical 	286 	9 	1988 	Yes	Life
+Breast Cancer Wisconsin (Original)	Multivariate 	Classification 	Integer 	699 	10 	1992 	Yes	Life
+Breast Cancer Wisconsin (Prognostic)	Multivariate 	Classification, Regression 	Real 	198 	34 	1995 	Yes	Life
+Breast Cancer Wisconsin (Diagnostic)	Multivariate 	Classification 	Real 	569 	32 	1995 	No	Life
+Pittsburgh Bridges	Multivariate 	Classification 	Categorical, Integer 	108 	13 	1990 	Yes	NA
+Car Evaluation	Multivariate 	Classification 	Categorical 	1728 	6 	1997 	No	NA
+Census Income	Multivariate 	Classification 	Categorical, Integer 	48842 	14 	1996 	Yes	Social
+Chess (King-Rook vs. King-Knight)	Multivariate, Data-Generator 	Classification 	Categorical, Integer 		22 	1988 	No	Game
+Chess (King-Rook vs. King-Pawn)	Multivariate 	Classification 	Categorical 	3196 	36 	1989 	No	Game
+Chess (King-Rook vs. King)	Multivariate 	Classification 	Categorical, Integer 	28056 	6 	1994 	No	Game
+Chess (Domain Theories)	Domain-Theory 	NA	NA	NA	NA	NA	NA	Game
+Bach Chorales	Univariate, Time-Series 	NA	Categorical, Integer 	100 	6 	NA	No	NA
+Connect-4	Multivariate, Spatial 	Classification 	Categorical 	67557 	42 	1995 	No	Game
+Credit Approval	Multivariate 	Classification 	Categorical, Integer, Real 	690 	15 	NA	Yes	Financial
+Japanese Credit Screening	Multivariate, Domain-Theory 	Classification 	Categorical, Real, Integer 	125 	NA	1992 	NA	Financial
+Computer Hardware	Multivariate 	Regression 	Integer 	209 	9 	1987 	No	Computer
+Contraceptive Method Choice	Multivariate 	Classification 	Categorical, Integer 	1473 	9 	1997 	No	Life
+Covertype	Multivariate 	Classification 	Categorical, Integer 	581012 	54 	1998 	No	Life
+Cylinder Bands	Multivariate 	Classification 	Categorical, Integer, Real 	512 	39 	1995 	Yes	Physical
+Dermatology	Multivariate 	Classification 	Categorical, Integer 	366 	33 	1998 	Yes	Life
+Diabetes	Multivariate, Time-Series 	NA	Categorical, Integer 		20 	NA	NA	Life
+DGP2 - The Second Data Generation Program	Data-Generator 	NA	Real 	NA	NA	NA	NA	NA
+Document Understanding	NA	NA	NA	NA	NA	1994 	No	NA
+EBL Domain Theories	NA	NA	NA	NA	NA	NA	NA	Computer
+Echocardiogram	Multivariate 	Classification 	Categorical, Integer, Real 	132 	12 	1989 	Yes	Life
+Ecoli	Multivariate 	Classification 	Real 	336 	8 	1996 	No	Life
+Flags	Multivariate 	Classification 	Categorical, Integer 	194 	30 	1990 	No	NA
+Function Finding	NA	Function-Learning 	Real 	352 	NA	1990 	No	Physical
+Glass Identification	Multivariate 	Classification 	Real 	214 	10 	1987 	No	Physical
+Haberman's Survival	Multivariate 	Classification 	Integer 	306 	3 	1999 	No	Life
+Hayes-Roth	Multivariate 	Classification 	Categorical 	160 	5 	1989 	No	Social
+Heart Disease	Multivariate 	Classification 	Categorical, Integer, Real 	303 	75 	1988 	Yes	Life
+Hepatitis	Multivariate 	Classification 	Categorical, Integer, Real 	155 	19 	1988 	Yes	Life
+Horse Colic	Multivariate 	Classification 	Categorical, Integer, Real 	368 	27 	1989 	Yes	Life
+Housing	Multivariate 	Regression 	Categorical, Integer, Real 	506 	14 	1993 	No	NA
+ICU	Multivariate, Time-Series 	NA	Real 	NA	NA	NA	No	Life
+Image Segmentation	Multivariate 	Classification 	Real 	2310 	19 	1990 	No	NA
+Internet Advertisements	Multivariate 	Classification 	Categorical, Integer, Real 	3279 	1558 	1998 	Yes	Computer
+Ionosphere	Multivariate 	Classification 	Integer, Real 	351 	34 	1989 	No	Physical
+Iris	Multivariate 	Classification 	Real 	150 	4 	1988 	No	Life
+ISOLET	Multivariate 	Classification 	Real 	7797 	617 	1994 	No	Computer
+Kinship	Relational 	Relational-Learning 	Categorical 	104 	12 	1990 	No	Social
+Labor Relations	Multivariate 	NA	Categorical, Integer, Real 	57 	16 	1988 	No	Social
+LED Display Domain	Multivariate, Data-Generator 	Classification 	Categorical 	NA	7 	1988 	No	Computer
+Lenses	Multivariate 	Classification 	Categorical 	24 	4 	1990 	No	NA
+Letter Recognition	Multivariate 	Classification 	Integer 	20000 	16 	1991 	No	Computer
+Liver Disorders	Multivariate 	NA	Categorical, Integer, Real 	345 	7 	1990 	No	Life
+Logic Theorist	Domain-Theory 	NA	NA	NA	NA	NA	NA	Computer
+Lung Cancer	Multivariate 	Classification 	Integer 	32 	56 	1992 	Yes	Life
+Lymphography	Multivariate 	Classification 	Categorical 	148 	18 	1988 	No	Life
+Mechanical Analysis	Multivariate 	Classification 	Categorical, Integer, Real 	209 	8 	1990 	No	Computer
+Meta-data	Multivariate 	Classification 	Categorical, Integer, Real 	528 	22 	1996 	Yes	NA
+Mobile Robots	Domain-Theory 	NA	Categorical, Integer, Real 		NA	1995 	NA	Computer
+Molecular Biology (Promoter Gene Sequences)	Sequential, Domain-Theory 	Classification 	Categorical 	106 	58 	1990 	No	Life
+Molecular Biology (Protein Secondary Structure)	Sequential 	Classification 	Categorical 	128 	NA	NA	NA	Life
+Molecular Biology (Splice-junction Gene Sequences)	Sequential, Domain-Theory 	Classification 	Categorical 	3190 	61 	1992 	No	Life
+MONK's Problems	Multivariate 	Classification 	Categorical 	432 	7 	1992 	No	Life
+Moral Reasoner	Domain-Theory 	NA	NA	202 	NA	1994 	NA	Computer
+Multiple Features	Multivariate 	Classification 	Integer, Real 	2000 	649 	NA	No	Computer
+Mushroom	Multivariate 	Classification 	Categorical 	8124 	22 	1987 	Yes	Life
+Musk (Version 1)	Multivariate 	Classification 	Integer 	476 	168 	1994 	No	Physical
+Musk (Version 2)	Multivariate 	Classification 	Integer 	6598 	168 	1994 	No	Physical
+Nursery	Multivariate 	Classification 	Categorical 	12960 	8 	1997 	No	Social
+Othello Domain Theory	Domain-Theory 	NA	NA	NA	NA	1991 	No	Game
+Page Blocks Classification	Multivariate 	Classification 	Integer, Real 	5473 	10 	1995 	No	Computer
+Pima Indians Diabetes	Multivariate 	Classification 	Integer, Real 	768 	8 	1990 	Yes	Life
+Optical Recognition of Handwritten Digits	Multivariate 	Classification 	Integer 	5620 	64 	1998 	No	Computer
+Pen-Based Recognition of Handwritten Digits	Multivariate 	Classification 	Integer 	10992 	16 	1998 	No	Computer
+Post-Operative Patient	Multivariate 	Classification 	Categorical, Integer 	90 	8 	1993 	Yes	Life
+Primary Tumor	Multivariate 	Classification 	Categorical 	339 	17 	1988 	Yes	Life
+Prodigy	Domain-Theory 	NA	NA	NA	NA	NA	NA	NA
+Qualitative Structure Activity Relationships	Domain-Theory 	NA	NA	NA	NA	NA	NA	Physical
+Quadruped Mammals	Multivariate, Data-Generator 	Classification 	Real 	NA	72 	1992 	No	Life
+Servo	Multivariate 	Regression 	Categorical, Integer 	167 	4 	1993 	No	Computer
+Shuttle Landing Control	Multivariate 	Classification 	Categorical 	15 	6 	1988 	No	Physical
+Solar Flare	Multivariate 	Regression 	Categorical 	1389 	10 	1989 	No	Physical
+Soybean (Large)	Multivariate 	Classification 	Categorical 	307 	35 	1988 	Yes	Life
+Soybean (Small)	Multivariate 	Classification 	Categorical 	47 	35 	1987 	No	Life
+Challenger USA Space Shuttle O-Ring	Multivariate 	Regression 	Integer 	23 	4 	1993 	No	Physical
+Low Resolution Spectrometer	Multivariate 	Classification 	Integer, Real 	531 	102 	1988 	NA	Physical
+Spambase	Multivariate 	Classification 	Integer, Real 	4601 	57 	1999 	Yes	Computer
+SPECT Heart	Multivariate 	Classification 	Categorical 	267 	22 	2001 	No	Life
+SPECTF Heart	Multivariate 	Classification 	Integer 	267 	44 	2001 	No	Life
+Sponge	Multivariate 	Clustering 	Categorical, Integer 	76 	45 	NA	Yes	Life
+Statlog Project	NA	NA	NA	NA	NA	1992 	NA	NA
+Student Loan Relational	Domain-Theory 	NA	NA	1000 	NA	1993 	NA	Social
+Teaching Assistant Evaluation	Multivariate 	Classification 	Categorical, Integer 	151 	5 	1997 	No	NA
+Tic-Tac-Toe Endgame	Multivariate 	Classification 	Categorical 	958 	9 	1991 	No	Game
+Thyroid Disease	Multivariate, Domain-Theory 	Classification 	Categorical, Real 	7200 	21 	1987 	NA	Life
+Trains	Multivariate 	Classification 	Categorical 	10 	32 	1994 	NA	NA
+University	Multivariate 	Classification 	Categorical, Integer 	285 	17 	1988 	Yes	NA
+Congressional Voting Records	Multivariate 	Classification 	Categorical 	435 	16 	1987 	Yes	Social
+Water Treatment Plant	Multivariate 	Clustering 	Integer, Real 	527 	38 	1993 	NA	Physical
+Waveform Database Generator (Version 1)	Multivariate, Data-Generator 	Classification 	Real 	5000 	21 	1988 	No	Physical
+Waveform Database Generator (Version 2)	Multivariate, Data-Generator 	Classification 	Real 	5000 	40 	1988 	No	Physical
+Wine	Multivariate 	Classification 	Integer, Real 	178 	13 	1991 	No	Physical
+Yeast	Multivariate 	Classification 	Real 	1484 	8 	1996 	No	Life
+Zoo	Multivariate 	Classification 	Categorical, Integer 	101 	17 	1990 	No	Life
+Undocumented	NA	NA	NA	NA	NA	NA	NA	NA
+Twenty Newsgroups	Text 	NA	NA	20000 	NA	1999 	No	NA
+Australian Sign Language signs	Multivariate, Time-Series 	Classification 	Categorical, Real 	6650 	15 	1999 	NA	NA
+Australian Sign Language signs (High Quality)	Multivariate, Time-Series 	Classification 	Real 	2565 	22 	2002 	NA	NA
+US Census Data (1990)	Multivariate 	Clustering 	Categorical 	2458285 	68 	NA	NA	Social
+Census-Income (KDD)	Multivariate 	Classification 	Categorical, Integer 	299285 	40 	2000 	Yes	Social
+Coil 1999 Competition Data	Multivariate 	NA	Categorical, Real 	340 	17 	1999 	No	Physical
+Corel Image Features	Multivariate 	NA	Real 	68040 	89 	1999 	NA	NA
+E. Coli Genes	Relational 	NA	NA	NA	NA	2001 	Yes	Life
+EEG Database	Multivariate, Time-Series 	NA	Categorical, Integer, Real 	122 	4 	1999 	Yes	Life
+El Nino	Spatio-temporal 	NA	Integer, Real 	178080 	12 	1999 	Yes	Physical
+Entree Chicago Recommendation Data	Transactional, Sequential 	Recommender-Systems 	Categorical 	50672 	NA	2000 	Yes	NA
+CMU Face Images	Image 	Classification 	Integer 	640 	NA	1999 	Yes	NA
+Insurance Company Benchmark (COIL 2000)	Multivariate 	Regression, Description 	Categorical, Integer 	9000 	86 	2000 	No	Social
+Internet Usage Data	Multivariate 	NA	Categorical, Integer 	10104 	72 	1999 	No	Computer
+IPUMS Census Database	Multivariate 	NA	Categorical, Integer 	256932 	61 	1999 	NA	Social
+Japanese Vowels	Multivariate, Time-Series 	Classification 	Real 	640 	12 	NA	NA	NA
+KDD Cup 1998 Data	Multivariate 	Regression 	Categorical, Integer 	191779 	481 	1998 	Yes	NA
+KDD Cup 1999 Data	Multivariate 	Classification 	Categorical, Integer 	4000000 	42 	1999 	NA	Computer
+M. Tuberculosis Genes	Relational 	NA	NA	NA	NA	2001 	NA	Life
+Movie	Multivariate, Relational 	NA	NA	10000 	NA	1999 	Yes	NA
+MSNBC.com Anonymous Web Data	Sequential 	NA	Categorical 	989818 	NA	NA	NA	Computer
+NSF Research Award Abstracts 1990-2003	Text 	NA	NA	129000 	NA	2003 	NA	NA
+Pioneer-1 Mobile Robot Data	Multivariate, Time-Series 	NA	Categorical, Real 		NA	1999 	NA	Computer
+Pseudo Periodic Synthetic Time Series	Univariate, Time-Series 	NA	NA	100000 	NA	1999 	NA	NA
+Reuters-21578 Text Categorization Collection	Text 	Classification 	Categorical 	21578 	5 	1997 	NA	NA
+Robot Execution Failures	Multivariate, Time-Series 	Classification 	Integer 	463 	90 	1999 	NA	Physical
+Synthetic Control Chart Time Series	Time-Series 	Classification, Clustering 	Real 	600 	NA	1999 	NA	NA
+Syskill and Webert Web Page Ratings	Multivariate, Text 	Classification 	Categorical 	332 	5 	1998 	NA	NA
+UNIX User Data	Text, Sequential 	NA	NA	NA	NA	NA	NA	Computer
+Volcanoes on Venus - JARtool experiment	Image 	Classification 	NA	NA	NA	NA	Yes	Physical
+Statlog (Australian Credit Approval)	Multivariate 	Classification 	Categorical, Integer, Real 	690 	14 	NA	Yes	Financial
+Statlog (German Credit Data)	Multivariate 	Classification 	Categorical, Integer 	1000 	20 	1994 	NA	Financial
+Statlog (Heart)	Multivariate 	Classification 	Categorical, Real 	270 	13 	NA	No	Life
+Statlog (Landsat Satellite)	Multivariate 	Classification 	Integer 	6435 	36 	1993 	NA	Physical
+Statlog (Image Segmentation)	Multivariate 	Classification 	Real 	2310 	19 	1990 	No	NA
+Statlog (Shuttle)	Multivariate 	Classification 	Integer 	58000 	9 	NA	NA	Physical
+Statlog (Vehicle Silhouettes)	Multivariate 	Classification 	Integer 	946 	18 	NA	NA	NA
+Connectionist Bench (Nettalk Corpus)	Multivariate 	NA	Categorical 	20008 	4 	NA	NA	NA
+Connectionist Bench (Sonar, Mines vs. Rocks)	Multivariate 	Classification 	Real 	208 	60 	NA	NA	Physical
+Connectionist Bench (Vowel Recognition - Deterding Data)		Classification 	Real 	528 	10 	NA	NA	NA
+Economic Sanctions	Domain-Theory 	NA	NA	NA	NA	NA	NA	Financial
+Protein Data	NA	NA	NA	NA	NA	NA	NA	Life
+Cloud	Multivariate 	NA	Real 	1024 	10 	1989 	NA	Physical
+CalIt2 Building People Counts	Multivariate, Time-Series 	NA	Categorical, Integer 	10080 	4 	2006 	NA	NA
+Dodgers Loop Sensor	Multivariate, Time-Series 	NA	Categorical, Integer 	50400 	3 	2006 	Yes	NA
+Poker Hand	Multivariate 	Classification 	Categorical, Integer 	1025010 	11 	2007 	No	Game
+MAGIC Gamma Telescope	Multivariate 	Classification 	Real 	19020 	11 	2007 	No	Physical
+UJI Pen Characters	Multivariate, Sequential 	Classification 	Integer 	1364 	NA	2007 	No	Computer
+Mammographic Mass	Multivariate 	Classification 	Integer 	961 	6 	2007 	Yes	Life
+Forest Fires	Multivariate 	Regression 	Real 	517 	13 	2008 	NA	Physical
+Reuters Transcribed Subset	Text 	Classification 	NA	200 	NA	2008 	NA	Business
+Bag of Words	Text 	Clustering 	Integer 	8000000 	100000 	2008 	NA	NA
+Concrete Compressive Strength	Multivariate 	Regression 	Real 	1030 	9 	2007 	NA	Physical
+Hill-Valley	Sequential 	Classification 	Real 	606 	101 	2008 	NA	NA
+Arcene	Multivariate 	Classification 	Real 	900 	10000 	2008 	NA	Life
+Dexter	Multivariate 	Classification 	Integer 	2600 	20000 	2008 	NA	NA
+Dorothea	Multivariate 	Classification 	Integer 	1950 	100000 	2008 	NA	Life
+Gisette	Multivariate 	Classification 	Integer 	13500 	5000 	2008 	NA	Computer
+Madelon	Multivariate 	Classification 	Real 	4400 	500 	2008 	NA	NA
+Ozone Level Detection	Multivariate, Sequential, Time-Series 	Classification 	Real 	2536 	73 	2008 	Yes	Physical
+Abscisic Acid Signaling Network	Multivariate 	Causal-Discovery 	Integer 	300 	43 	2008 	NA	Life
+Parkinsons	Multivariate 	Classification 	Real 	197 	23 	2008 	NA	Life
+Character Trajectories	Time-Series 	Classification, Clustering 	Real 	2858 	3 	2008 	NA	Computer
+Blood Transfusion Service Center	Multivariate 	Classification 	Real 	748 	5 	2008 	NA	Business
+UJI Pen Characters (Version 2)	Multivariate, Sequential 	Classification 	Integer 	11640 	NA	2009 	NA	Computer
+Semeion Handwritten Digit	Multivariate 	Classification 	Integer 	1593 	256 	2008 	NA	Computer
+SECOM	Multivariate 	Classification, Causal-Discovery 	Real 	1567 	591 	2008 	Yes	Computer
+Plants	Multivariate 	Clustering 	Categorical 	22632 	70 	2008 	Yes	Life
+Libras Movement	Multivariate, Sequential 	Classification, Clustering 	Real 	360 	91 	2009 	NA	NA
+Concrete Slump Test	Multivariate 	Regression 	Real 	103 	10 	2009 	NA	Computer
+Communities and Crime	Multivariate 	Regression 	Real 	1994 	128 	2009 	Yes	Social
+Acute Inflammations	Multivariate 	Classification 	Categorical, Integer 	120 	6 	2009 	No	Life
+Wine Quality	Multivariate 	Classification, Regression 	Real 	4898 	12 	2009 	NA	Business
+URL Reputation	Multivariate, Time-Series 	Classification 	Integer, Real 	2396130 	3231961 	2009 	NA	Computer
+p53 Mutants	Multivariate 	Classification 	Real 	16772 	5409 	2010 	Yes	Life
+Parkinsons Telemonitoring	Multivariate 	Regression 	Integer, Real 	5875 	26 	2009 	NA	Life
+Demospongiae	Multivariate 	Classification 	Integer 	503 	NA	2010 	Yes	Life
+Opinosis Opinion ? Review	Text 	NA	NA	51 	NA	2010 	NA	Computer
+Breast Tissue	Multivariate 	Classification 	Real 	106 	10 	2010 	NA	Life
+Cardiotocography	Multivariate 	Classification 	Real 	2126 	23 	2010 	NA	Life
+Wall-Following Robot Navigation Data	Multivariate, Sequential 	Classification 	Real 	5456 	24 	2010 	NA	Computer
+Spoken Arabic Digit	Multivariate, Time-Series 	Classification 	Real 	8800 	13 	2010 	No	NA
+Localization Data for Person Activity	Univariate, Sequential, Time-Series 	Classification 	Real 	164860 	8 	2010 	NA	Life
+AutoUniv	Multivariate 	Classification 	Categorical, Integer, Real 		NA	2010 	NA	NA
+Steel Plates Faults	Multivariate 	Classification 	Integer, Real 	1941 	27 	2010 	NA	Physical
+MiniBooNE particle identification	Multivariate 	Classification 	Real 	130065 	50 	2010 	NA	Physical
+YearPredictionMSD	Multivariate 	Regression 	Real 	515345 	90 	2011 	NA	NA
+PEMS-SF	Multivariate, Time-Series 	Classification 	Real 	440 	138672 	2011 	NA	Computer
+OpinRank Review Dataset	Text 	NA	NA	NA	NA	2011 	NA	Computer
+Relative location of CT slices on axial axis	Domain-Theory 	Regression 	Real 	53500 	386 	2011 	NA	Computer
+Online Handwritten Assamese Characters Dataset	Multivariate, Sequential 	Classification 	Integer 	8235 	NA	2011 	NA	Computer
+PubChem Bioassay Data	Multivariate 	Classification 	Integer, Real 	NA	NA	2011 	NA	Life
+Record Linkage Comparison Patterns	Multivariate 	Classification 	Real 	5749132 	12 	2011 	Yes	NA
+Communities and Crime Unnormalized	Multivariate 	Regression 	Real 	2215 	147 	2011 	Yes	Social
+Vertebral Column	Multivariate 	Classification 	Real 	310 	6 	2011 	NA	NA
+EMG Physical Action Data Set	Time-Series 	Classification 	Real 	10000 	8 	2011 	NA	Physical
+Vicon Physical Action Data Set	Time-Series 	Classification 	Real 	3000 	27 	2011 	NA	Physical
+Amazon Commerce reviews set	Multivariate, Text, Domain-Theory 	Classification 	Real 	1500 	10000 	2011 	NA	Physical
+Amazon Access Samples	Time-Series, Domain-Theory 	Regression, Clustering, Causal-Discovery 	NA	30000 	20000 	2011 	NA	Business
+Reuter_50_50	Multivariate, Text, Domain-Theory 	Classification, Clustering 	Real 	2500 	10000 	2011 	NA	Computer
+Farm Ads	Text 	Classification 	NA	4143 	54877 	2011 	NA	Business
+DBWorld e-mails	Text 	Classification 	NA	64 	4702 	2011 	NA	Computer
+KEGG Metabolic Relation Network (Directed)	Multivariate, Univariate, Text 	Classification, Regression, Clustering 	Integer, Real 	53414 	24 	2011 	NA	Life
+KEGG Metabolic Reaction Network (Undirected)	Multivariate, Univariate, Text 	Classification, Regression, Clustering 	Integer, Real 	65554 	29 	2011 	Yes	Life
+Bank Marketing	Multivariate 	Classification 	Real 	45211 	17 	2012 	NA	Business
+YouTube Comedy Slam Preference Data	Text 	Classification 	NA	1138562 	3 	2012 	NA	Computer
+Gas Sensor Array Drift Dataset	Multivariate 	Classification 	Real 	13910 	128 	2012 	NA	Computer
+ILPD (Indian Liver Patient Dataset)	Multivariate 	Classification 	Integer, Real 	583 	10 	2012 	NA	Life
+OPPORTUNITY Activity Recognition	Multivariate, Time-Series 	Classification 	Real 	2551 	242 	2012 	Yes	Computer
+Nomao	Univariate 	Classification 	Real 	34465 	120 	2012 	NA	Computer
+SMS Spam Collection	Multivariate, Text, Domain-Theory 	Classification, Clustering 	Real 	5574 	NA	2012 	NA	Computer
+Skin Segmentation	Univariate 	Classification 	Real 	245057 	4 	2012 	NA	Computer
+Planning Relax	Univariate 	Classification 	Real 	182 	13 	2012 	NA	Computer
+PAMAP2 Physical Activity Monitoring	Multivariate, Time-Series 	Classification 	Real 	3850505 	52 	2012 	Yes	Computer
+Restaurant & consumer data	Multivariate 	NA	NA	138 	47 	2012 	Yes	Computer
+CNAE-9	Multivariate, Text 	Classification 	Integer 	1080 	857 	2012 	NA	Business
+Individual household electric power consumption	Multivariate, Time-Series 	Regression, Clustering 	Real 	2075259 	9 	2012 	Yes	Physical
