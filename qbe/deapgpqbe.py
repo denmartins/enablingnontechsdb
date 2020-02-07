@@ -12,35 +12,28 @@ class DEAPGeneticProgrammingQBE(object):
     def evaluate_fitness(self, individual):
         # Transform the tree expression in a callable function
         func = self.toolbox.compile(expr=individual)
-        return self.fitness_function.calculate(func),
+        return self.fitness_function.calculate(func, individual),
          
     def configure_genetic_programming(self, dataframe):    
-        pset = gp.PrimitiveSetTyped("MAIN", [str for x in dataframe.columns], bool)
+        pset = gp.PrimitiveSetTyped("MAIN", [float for x in dataframe.columns], bool)
         pset.addPrimitive(operator.and_, [bool, bool], bool)
-        pset.addPrimitive(operator.or_, [bool, bool], bool)
-        pset.addPrimitive(operator.eq, [str, float], bool)
-        pset.addPrimitive(operator.gt, [str, float], bool)
-        pset.addPrimitive(operator.ge, [str, float], bool)
-        pset.addPrimitive(operator.lt, [str, float], bool)
-        pset.addPrimitive(operator.le, [str, float], bool)
-        pset.addPrimitive(operator.ne, [str, float], bool)
-
+        pset.addPrimitive(operator.le, [float, float], bool)
+        pset.addPrimitive(operator.ge, [float, float], bool)
+        pset.addPrimitive(operator.eq, [float, float], bool)
+        
         def notapplied(val):
             return val
 
-        pset.addPrimitive(notapplied, [str], str)
         pset.addPrimitive(notapplied, [float], float)
         pset.addTerminal(True, bool)
-
-        # Get all possible values in the dataframe and use them as terminals
-        terminals = set()
-        for col in dataframe.columns:
-            for val in set(dataframe[col].values):
-                terminals.add(val)
-
-        for t in terminals:
-            pset.addTerminal(t, float)
-
+        pset.addTerminal(False, bool)
+        pset.addTerminal(1, float)
+        pset.addTerminal(0, float)
+        pset.addTerminal(0.5, float)
+        
+        for i in range(5):
+            pset.addEphemeralConstant("rand"+str(i), lambda: random.random(), float)
+    
         col_names = {}
         for i in range(len(dataframe.columns)):
             arg = 'ARG' + str(i)
@@ -67,7 +60,7 @@ class DEAPGeneticProgrammingQBE(object):
         # Register fitness function
         toolbox.register('evaluate', self.evaluate_fitness)
         # Selection strategy        
-        toolbox.register("select", tools.selDoubleTournament, parsimony_size=1.4, fitness_size=6, fitness_first=True)
+        toolbox.register("select", tools.selTournament, tournsize=3)
         # Crossover strategy
         toolbox.register("mate", gp.cxOnePointLeafBiased, termpb=0.1)
         # Mutation strategy

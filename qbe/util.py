@@ -5,11 +5,14 @@ def replace_feature_names(query, feature_names):
     return query
 
 def adjust_expression_for_convertion(expression):
-    return expression.replace("'", '').replace(' ', '').replace('(',',').replace(')', '').split(',')
+    return [e.strip() for e in expression.replace('(',',').replace(')', '').split(',')]
 
 def rename_operators(expression):
     # Operators have the form **op** to avoid conflict with column names
-    operators = {'**gt**': '>', '**lt**': '<', '**eq**': '=',  '**and_**': 'AND', '**or_**': 'OR', '**ge**': '>=', '**le**': '<=', '**ne**': '<>'}
+    operators = {'**gt**': '>', '**lt**': '<', 
+                '**eq**': '==',  '**and_**': 'and', 
+                '**or_**': 'or', '**ge**': '>=', 
+                '**le**': '<=', '**ne**': '!='}
 
     text = str(expression)
     for key, value in operators.items():
@@ -22,7 +25,7 @@ def pref2inf(expression):
     stack = []
     l = adjusted[::-1]
     for e in l:
-        if e in ['gt', 'eq', 'lt', 'and_', 'or_', 'add', 'ge', 'le', 'ne']:
+        if e.strip() in ['gt', 'eq', 'lt', 'and_', 'or_', 'add', 'ge', 'le', 'ne']:
             op1 = stack.pop()
             op2 = stack.pop()
             stack.append('(%s **%s** %s)' % (op1, e, op2)) # Operator's form **op**
@@ -35,7 +38,12 @@ def pref2inf(expression):
                     stack.append(op)
             else:
                 stack.append(e)
+                
     return rename_operators(stack.pop())
+
+def is_number_repl_isdigit(s):
+    """ Returns True is string is a number. """
+    return s.replace('.','',1).isdigit()
 
 def classification_rule_2_sql(classification_rule):
     select_statement_query = "SELECT * FROM dataframe WHERE {}".format(classification_rule)
@@ -48,7 +56,7 @@ def genetic_2_predicate(genetic_individual):
 def convert_nparray_to_set(nparray):
     converted_set = set([tuple(i) for i in nparray.values[0:nparray.size,:]])
     return converted_set
-
+    
 def get_information_retrieval_metrics(dataframe, desired_output, actual_output):
     TOTAL = convert_nparray_to_set(dataframe)
     RELEVANT = convert_nparray_to_set(desired_output)

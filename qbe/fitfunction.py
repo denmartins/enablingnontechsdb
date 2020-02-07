@@ -1,11 +1,39 @@
-import qbe.util
+import qbe.util as util
 import pandasql as pdsql
 import numpy as np
 from sklearn.utils import check_random_state
+from sklearn.metrics import precision_recall_fscore_support
 
 class AbstractFitnessFunction(object):
-    def calulate(self, individual):
+    def calulate(self, individual, raw_individual=None):
         raise NotImplementedError('Method not implemented.')
+
+class PersonalizedFitnessFunction(AbstractFitnessFunction):
+    def __init__(self, X_train, y_train):
+        self.X_train = X_train
+        self.y_train = y_train
+
+        self.true_positives = set([i for i in range(len(self.y_train)) if self.y_train[i] == 1])
+        self.true_negatives = set([i for i in range(len(self.y_train)) if self.y_train[i] == 0])
+        
+    def calculate(self, individual, raw_individual):
+        predicted = [bool(individual(*x)) for x in self.X_train]
+    
+        positive_pred = set([i for i in range(len(predicted)) if predicted[i] == 1])
+        negative_pred = set([i for i in range(len(predicted)) if predicted[i] == 0])
+        
+        pos_hits = len(self.true_positives & positive_pred)
+        neg_hits = len(self.true_negatives - negative_pred)
+
+        fitness = 1000
+        size_selected = len(positive_pred)
+        
+        ind_size = len(util.genetic_2_predicate(raw_individual).split('and'))
+        if size_selected > 0:
+            fitness = len(self.true_positives) - pos_hits + 2.0*neg_hits + 0.05*ind_size + 0.1*size_selected
+            #fitness = 1 - precision_recall_fscore_support(self.y_train, predicted, average='binary')[2] + 0.05*ind_size
+
+        return fitness
 
 class QueryDiscoveryFitnessFunction(AbstractFitnessFunction):
     def __init__(self, dataframe, desired_indexes):
@@ -26,7 +54,7 @@ class QueryDiscoveryFitnessFunction(AbstractFitnessFunction):
         self.training_data = shuffled_data[:,:num_features]
         self.training_target = shuffled_data[:, -1]
 
-    def calculate(self, individual):
+    def calculate(self, individual, raw_individual=None):
         total_positives = len([p for p in self.training_target if p == 1])
         total_negatives = len(self.training_target) - total_positives
         true_positives = 0
@@ -66,7 +94,7 @@ class SQLFitnessFunction(AbstractFitnessFunction):
         query = util.classification_rule_2_sql(util.genetic_2_predicate(genetic_solution))
         return self.base_calculate(query, multi_objective=True)
 
-    def calculate(self, solution):
+    def calculate(self, solution, raw_individual=None):
         query = util.classification_rule_2_sql(solution)
         return self.base_calculate(query)
     
