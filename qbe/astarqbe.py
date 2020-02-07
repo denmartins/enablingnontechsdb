@@ -1,5 +1,5 @@
 from queue import PriorityQueue
-import util
+import qbe.util as util
 
 class Graph(object):
     def __init__(self, dataframe):

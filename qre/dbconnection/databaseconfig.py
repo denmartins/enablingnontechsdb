@@ -1,1 +1,0 @@
-SQLITE_DB_PATH = 'C:\\Users\\d_mart04\\Documents\\IMDB\\imdb.db'

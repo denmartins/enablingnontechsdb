@@ -1,4 +1,4 @@
-import qbe.util
+import qbe.util as util
 from deap import base, creator, tools, gp, algorithms
 import random, operator
 import numpy as np

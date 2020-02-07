@@ -1,4 +1,4 @@
-import util
+import qbe.util as util
 
 class GreedySearchQBE(object):
     def __init__(self, fitness_function, dataframe):

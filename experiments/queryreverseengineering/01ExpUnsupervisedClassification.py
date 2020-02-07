@@ -34,42 +34,6 @@ def create_som(data, x_size, y_size):
 
     return som
 
-def create_gp(logic=False):
-    # Define custom logical operators for our Genetic Programming
-    def and_op(x1, x2):
-        return np.logical_and(x1, x2)
-
-    def or_op(x1, x2):
-        return np.logical_or(x1, x2)
-
-    def gt_op(x1, x2):
-        return np.greater_equal(x1, x2)
-
-    def lt_op(x1, x2):
-        return np.less_equal(x1, x2)
-
-    def eq_op(x1, x2):
-        return np.equal(x1, x2)
-
-    # Use make_function to create function nodes in our GP
-    and_ = make_function(function=and_op, name='and_', arity=2)
-    or_ = make_function(function=or_op, name='or_', arity=2)
-    gt_ = make_function(function=gt_op, name='gt', arity=2)
-    lt_ = make_function(function=lt_op, name='lt', arity=2)
-    eq_ = make_function(function=eq_op, name='eq', arity=2) 
-
-    if logic:
-        function_set = [and_, or_, gt_, lt_, eq_]
-
-    est_gp = SymbolicClassifier(population_size=200,
-                           generations=50, stopping_criteria=0.01,
-                           p_crossover=0.7, p_subtree_mutation=0.1,
-                           p_hoist_mutation=0.05, p_point_mutation=0.1,
-                           max_samples=0.9, verbose=0,
-                           parsimony_coefficient=0.01)
-
-    return est_gp
-
 def get_neighborhood(centroid_2d_position, step, x_size, y_size):
     neighborhood = [centroid_2d_position]
     if step > 0:
@@ -119,55 +83,7 @@ def classify2(som, data, class_assignments):
     
     return prediction
 
-def create_somoclu(x_size, y_size):
-    n_rows, n_columns = y_size, x_size 
-    som = somoclu.Somoclu(n_rows=n_rows, n_columns=n_columns, compactsupport=False, initialization='pca')
-    return som
-
 from collections import Counter
-
-def somoclu_labels_map(data, som, labels):
-    """Returns a dictionary wm where wm[(i,j)] is a dictionary
-    that contains the number of samples from a given label
-    that have been mapped in position i,j.
-    Parameters
-    ----------
-    data : np.array or list
-        Data matrix.
-    label : np.array or list
-        Labels for each sample in data.
-    """
-    if not len(data) == len(labels):
-        raise ValueError('data and labels must have the same length.')
-    winmap = dict()
-    for i in range(len(data)):
-        w = som.bmus[i]
-        w = tuple(w)
-        if not w in winmap.keys():
-            winmap[w] = []
-        winmap[w] = winmap[w] + [labels[i]]
-
-    for position in winmap.keys():
-        winmap[position] = Counter(winmap[position])
-
-    return winmap
-
-def somoclu_classify(som, data, class_assignments):
-    """Classifies each sample in data in one of the classes definited
-    using the method labels_map.
-    Returns a list of the same length of data where the i-th element
-    is the class assigned to data[i].
-    """
-    winmap = class_assignments
-    default_class = np.sum(list(winmap.values())).most_common()[0][0]
-    result = []
-    for d in data:
-        win_position = som.bmus[d]
-        if tuple(win_position) in winmap.keys():
-            result.append(winmap[tuple(win_position)].most_common()[0][0])
-        else:
-            result.append(default_class)
-    return result
 
 def output_report(results, report, estimator_name, query_id, factor_ex):
     df = pd.DataFrame(report).transpose()
@@ -239,16 +155,16 @@ def experiment(name_data, original_data, preprocessed_data, queries, nexperiment
                 report = list(scores[:3]) + ['DT', query_id, factor_ex]
                 result.append(report)
 
-                # # OneClassSVM
-                # oneclass = OneClassSVM(kernel='rbf', gamma=0.001, nu=0.1)
-                # print('svm training started')
-                # oneclass.fit(X_train)
-                # print('svm training finished')
-                # predicted = [int(y < 1) for y in oneclass.predict(X_test)]
+                # OneClassSVM
+                oneclass = OneClassSVM(kernel='rbf', gamma=0.001, nu=0.1)
+                print('svm training started')
+                oneclass.fit(X_train)
+                print('svm training finished')
+                predicted = [int(y < 1) for y in oneclass.predict(X_test)]
 
-                # scores = precision_recall_fscore_support(y_test, predicted, average='binary')[:3]
-                # report = list(scores[:3]) + ['OCSVM', query_id, factor_ex]
-                # result.append(report)
+                scores = precision_recall_fscore_support(y_test, predicted, average='binary')[:3]
+                report = list(scores[:3]) + ['OCSVM', query_id, factor_ex]
+                result.append(report)
 
                 # GP
                 gp.simple_search(population_size=300, crossover_rate=0.8, 
