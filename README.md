@@ -20,14 +20,4 @@ Next, we described all libraries that have been used to develop the techniques d
 
 **TOPSIS technique**: The library [Scikit-Criteria](https://scikit-criteria.readthedocs.io) has been employed. Scikit-Criteria implements a collection of multi-criteria decision analysis methods in Python. It offers an out-of-the-box implementation of the TOPSIS technique that has been used in the experiments provided in Chapter 5.
 
-## Employed data sets
-...
-
-# License
-...
-
-# Citation
-...
-
-# Acknowledgments
-...
+**PySQL**: The [PySql](http://pysql.sourceforge.net/) library has been used in this project for allowing SQL statements to be executed in [Pandas Dataframes](https://pandas.pydata.org/pandas-docs/stable/getting_started/dsintro.html).

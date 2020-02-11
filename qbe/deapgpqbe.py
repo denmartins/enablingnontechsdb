@@ -60,7 +60,7 @@ class DEAPGeneticProgrammingQBE(object):
         # Register fitness function
         toolbox.register('evaluate', self.evaluate_fitness)
         # Selection strategy        
-        toolbox.register("select", tools.selTournament, tournsize=3)
+        toolbox.register("select", tools.selTournament, tournsize=6)
         # Crossover strategy
         toolbox.register("mate", gp.cxOnePointLeafBiased, termpb=0.1)
         # Mutation strategy
