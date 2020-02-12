@@ -10,15 +10,16 @@ class KmeansDiscriminator():
     def __init__(self, preprocessed_dataset):
         self.kmeans = None
         self.preprocessed_data = preprocessed_dataset.copy(True)
+        self.columns = preprocessed_dataset.columns
 
     def discriminate(self, candidates_to_discriminate, candidates):
-        filename = 'datasets\\kmeans.sav'
+        filename = 'database\\kmeans.sav'
         if os.path.isfile(filename):
             self.kmeans = pickle.load(open(filename, 'rb'))
-            clusters = self.kmeans.predict(self.preprocessed_data.as_matrix())
+            clusters = self.kmeans.predict(self.preprocessed_data[self.columns].as_matrix())
         else:
             self.kmeans = KMeans(n_clusters=4)
-            clusters = self.kmeans.fit_predict(self.preprocessed_data.as_matrix())
+            clusters = self.kmeans.fit_predict(self.preprocessed_data[self.columns].as_matrix())
             pickle.dump(self.kmeans, open(filename, 'wb'))
         
         self.preprocessed_data['cluster'] = clusters
@@ -32,8 +33,7 @@ class KmeansDiscriminator():
         candidates.loc[self.preprocessed_data[self.preprocessed_data['cluster'] == 2].index.values]['cluster'] = 'Sportive, midsized, balanced, american cars'
         candidates.loc[self.preprocessed_data[self.preprocessed_data['cluster'] == 3].index.values]['cluster'] = 'Small, high fuel economy, cheap cars'
 
-        #print(candidates.loc[candidates_to_discriminate.index.values])
-        #self.print_graphs(cluster_means, cluster_columns)
+        self.print_heatmap(cluster_means, cluster_columns)
     
     def print_heatmap(self, cluster_means, cluster_columns):
         fig, ax = plt.subplots(figsize=(10,10))
